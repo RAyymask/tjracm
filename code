@@ -1,0 +1,33 @@
+python版本——单源dij板子
+
+from typing import List
+from heapq import *  # 堆优化用到heapq模块
+
+
+class Solution:
+    def minimumTime(self, n: int, edges: List[List[int]], disappear: List[int]) -> List[int]:
+        g = [[] for _ in range(n)]  # 稀疏图用邻接表
+        for u, v, cost in edges:
+            g[u].append((v, cost))
+            g[v].append((u, cost))
+
+        inf = pow(2, 31) - 1  # 无穷大
+        dis = [inf] * (n + 1)
+
+        # 核心代码
+        def dijkstra(start: int):
+            dis[start] = 0  # 源点到源点距离为0
+            vis = [0] * (n + 1)  # 是否被标记
+            heap = [[0, start]]  # heap中放源点到其他点的距离和点即[cost,u] cost是距离，u是点，heappop会自动根据第一个cost进行小根堆，cost最小的在上面被弹出
+            while heap:
+                cost, u = heappop(heap)
+                if vis[u] == 0:
+                    vis[u] = 1
+                    for v, val in g[u]:
+                        new_dis = dis[u] + val
+                        if dis[v] > new_dis:  # 更新距离
+                            dis[v] = dis[u] + val
+                            heappush(heap, [dis[v], v])
+
+        dijkstra(0)
+        return dis
