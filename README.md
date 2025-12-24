@@ -18,6 +18,10 @@ https://leetcode.cn/discuss/post/3579371/li-kou-zui-nan-si-wei-ti-ti-dan-by-xiao
 https://www.nowcoder.com/feed/main/detail/3f3c361d7354450f965d407e5ea2de34  ES（Elasticsearch）面试常见八股整理
 https://mp.weixin.qq.com/s?__biz=MzIyOTYxNDI5OA==&mid=2247487312&idx=1&sn=fa19566f5729d6598155b5c676eee62d&chksm=e8beb8e5dfc931f3e35655da9da0b61c79f2843101c130cf38996446975014f958a6481aacf1&scene=178&cur_album_id=1699766580538032128#rd  缓存和数据库一致性问题
 
+GO学习
+https://javabetter.cn/xuexiluxian/go.html  Go 语言学习路线
+
+
 电子书推荐
 3.1 理论基石：计算机科学原理
 《深入理解计算机系统》
